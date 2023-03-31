@@ -93,7 +93,9 @@ extension ViewController: UITextViewDelegate{
         textField.layer.borderColor = UIColor.gray.cgColor
         textField.layer.cornerRadius = 16
         tableView.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-        
+        self.view.backgroundColor = .black
+        textField.backgroundColor = .clear
+        textField.textColor = .white
     }
     
     func deleteNote(index: Int) {
