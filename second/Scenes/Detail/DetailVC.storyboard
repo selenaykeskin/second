@@ -18,15 +18,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-T2-h43">
                                 <rect key="frame" x="0.0" y="118.66666666666669" width="393" height="640"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-I5-Ihm">
-                                <rect key="frame" x="0.0" y="427.66666666666669" width="393" height="21.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-I5-Ihm">
+                                <rect key="frame" x="50" y="427.66666666666669" width="293" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seloş'un Gizli Notu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-lM-tSb">
-                                <rect key="frame" x="0.0" y="327.66666666666669" width="393" height="21"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,11 +32,9 @@
                             <constraint firstItem="kKk-I5-Ihm" firstAttribute="centerY" secondItem="R2b-T2-h43" secondAttribute="centerY" id="7qx-GI-Pk3"/>
                             <constraint firstItem="R2b-T2-h43" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="8Fb-XM-0z9"/>
                             <constraint firstItem="R2b-T2-h43" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="H9N-Oc-OxK"/>
-                            <constraint firstItem="R2b-T2-h43" firstAttribute="trailing" secondItem="Xdg-lM-tSb" secondAttribute="trailing" id="Lqt-lc-rcK"/>
-                            <constraint firstItem="R2b-T2-h43" firstAttribute="trailing" secondItem="kKk-I5-Ihm" secondAttribute="trailing" id="NFc-4H-F1e"/>
-                            <constraint firstItem="Xdg-lM-tSb" firstAttribute="top" secondItem="kKk-I5-Ihm" secondAttribute="top" constant="-100" id="Upe-0Q-UuQ"/>
-                            <constraint firstItem="Xdg-lM-tSb" firstAttribute="leading" secondItem="R2b-T2-h43" secondAttribute="leading" id="YPk-wD-JSP"/>
-                            <constraint firstItem="kKk-I5-Ihm" firstAttribute="leading" secondItem="R2b-T2-h43" secondAttribute="leading" id="Z8U-Tb-WD6"/>
+                            <constraint firstItem="R2b-T2-h43" firstAttribute="trailing" secondItem="kKk-I5-Ihm" secondAttribute="trailing" constant="50" id="NFc-4H-F1e"/>
+                            <constraint firstItem="kKk-I5-Ihm" firstAttribute="leading" secondItem="R2b-T2-h43" secondAttribute="leading" constant="50" id="Z8U-Tb-WD6"/>
+                            <constraint firstItem="kKk-I5-Ihm" firstAttribute="height" secondItem="R2b-T2-h43" secondAttribute="height" multiplier="0.0338542" id="otF-xB-2BD"/>
                         </constraints>
                     </view>
                     <connections>
