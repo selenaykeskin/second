@@ -13,21 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let defaults = UserDefaults.standard
 
-    
     var note:[String] = []
-    
-    func deleteNote(index: Int) {
-        let alert = UIAlertController(title: "Notu sil", message: "Bu notu silmek istediğinden emin misin?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { [self] action in note.remove(at: index)
-            defaults.set(note, forKey: "SavedNotes")
-            tableView.reloadData()
 
-        }))
-        alert.addAction(UIAlertAction(title: "Hayır", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupApp()
@@ -69,11 +56,27 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
         cell.label?.sizeToFit()
         let height = cell.label?.frame.height ?? 0.0
-        return height + 20.0    }
+        return height + 20.0
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+
+            deleteNote(index: indexPath.row)
+        }
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        deleteNote(index: indexPath.row)    }
+        
+        let vc = UIStoryboard.init(name: "DetailVC", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
+        var tryText: String = note[indexPath.row]
+        if let detailVC = vc {
+            detailVC.detailLabelText = tryText
+        }
 
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
     
 }
 
@@ -82,6 +85,7 @@ extension ViewController: UITextViewDelegate{
     func setupApp() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsMultipleSelectionDuringEditing = false
    }
     
     func setupUI() {
@@ -92,7 +96,17 @@ extension ViewController: UITextViewDelegate{
         
     }
     
-   
+    func deleteNote(index: Int) {
+        let alert = UIAlertController(title: "Notu sil", message: "Bu notu silmek istediğinden emin misin?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { [self] action in note.remove(at: index)
+            defaults.set(note, forKey: "SavedNotes")
+            tableView.reloadData()
+
+        }))
+        alert.addAction(UIAlertAction(title: "Hayır", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 

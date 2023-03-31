@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailVC" customModule="second" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-T2-h43">
+                                <rect key="frame" x="0.0" y="118.66666666666669" width="393" height="640"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-I5-Ihm">
+                                <rect key="frame" x="0.0" y="427.66666666666669" width="393" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seloş'un Gizli Notu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-lM-tSb">
+                                <rect key="frame" x="0.0" y="327.66666666666669" width="393" height="21"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R2b-T2-h43" secondAttribute="trailing" id="0L4-rm-1S2"/>
+                            <constraint firstItem="kKk-I5-Ihm" firstAttribute="centerY" secondItem="R2b-T2-h43" secondAttribute="centerY" id="7qx-GI-Pk3"/>
+                            <constraint firstItem="R2b-T2-h43" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="8Fb-XM-0z9"/>
+                            <constraint firstItem="R2b-T2-h43" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="H9N-Oc-OxK"/>
+                            <constraint firstItem="R2b-T2-h43" firstAttribute="trailing" secondItem="Xdg-lM-tSb" secondAttribute="trailing" id="Lqt-lc-rcK"/>
+                            <constraint firstItem="R2b-T2-h43" firstAttribute="trailing" secondItem="kKk-I5-Ihm" secondAttribute="trailing" id="NFc-4H-F1e"/>
+                            <constraint firstItem="Xdg-lM-tSb" firstAttribute="top" secondItem="kKk-I5-Ihm" secondAttribute="top" constant="-100" id="Upe-0Q-UuQ"/>
+                            <constraint firstItem="Xdg-lM-tSb" firstAttribute="leading" secondItem="R2b-T2-h43" secondAttribute="leading" id="YPk-wD-JSP"/>
+                            <constraint firstItem="kKk-I5-Ihm" firstAttribute="leading" secondItem="R2b-T2-h43" secondAttribute="leading" id="Z8U-Tb-WD6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detalilText" destination="kKk-I5-Ihm" id="5nn-ya-eng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="notepad" width="601" height="640"/>
+    </resources>
+</document>
