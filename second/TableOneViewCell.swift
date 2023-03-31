@@ -13,6 +13,7 @@ class TableOneViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
